@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,16 +18,22 @@
 <body>
 
   <nav class="ocean-nav">
-    <div class="ocean-logo">
-      <span class="emoji">🌊</span>
-      <span>DiveHers</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="stories.html">Stories</a></li>
-      <li><a href="opportunities.html">Opportunities</a></li>
-    </ul>
-  </nav>
+  <div class="ocean-logo">
+    <span class="emoji">🌊</span>
+    <span>DiveHers</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="stories.html">Stories</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="nav-dropdown-toggle">Opportunities ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="learn.html">Types of Opportunities</a></li>
+        <li><a href="opportunities.html">Browse Opportunities</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
   <!-- Hero Image -->
   <section class="hero-image">
@@ -156,6 +161,24 @@
       <p>&copy; 2025 DiveHers · Created by Emma Batty Sukerta · All rights reserved.</p>
     </div>
   </footer>
-
+<script>
+  // Mobile dropdown toggle
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var parent = this.closest('.nav-dropdown');
+      parent.classList.toggle('open');
+    });
+  });
+ 
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.nav-dropdown').forEach(function(d) {
+        d.classList.remove('open');
+      });
+    }
+  });
+</script>
 </body>
 </html>
