@@ -1152,3 +1152,39 @@ body.opportunities-page {
   }
 
 }
+
+/* Smaller opportunity cards */
+.opportunity {
+  padding: 1.1rem 1.25rem;
+}
+
+.opportunity h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.opportunity p {
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.location,
+.opens {
+  font-size: 0.78rem;
+}
+
+.board {
+  gap: 1.25rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  padding: 1.25rem;
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  padding: 1.5rem 0;
+}
