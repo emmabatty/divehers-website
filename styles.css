@@ -1063,3 +1063,64 @@ body.opportunities-page {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Fix giant title */
+  .section-title {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  /* Fix subtitle boxes — left align, smaller text */
+  .section-subtitle {
+    font-size: 0.95rem;
+    text-align: left;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Fix section headings */
+  .opportunities-section-title {
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    margin: 2rem 0 1.5rem;
+  }
+
+  /* Fix cards overflowing */
+  .board {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .opportunity {
+    flex: none;
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    transform: none !important;
+  }
+
+  /* Remove tilt on mobile — looks broken */
+  .rotate-left,
+  .rotate-right {
+    transform: none !important;
+  }
+
+  /* Fix container padding */
+  .container {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  /* Fix footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-section:last-child ul {
+    column-count: 1;
+  }
+}
