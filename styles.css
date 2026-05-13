@@ -1124,3 +1124,31 @@ body.opportunities-page {
     column-count: 1;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Fix navbar — everything on one line */
+  .ocean-nav {
+    flex-wrap: nowrap;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+  }
+
+  /* Hide the extra ✦ star under the title */
+  .section-title::after {
+    display: none;
+  }
+
+  /* Also hide the before star on opportunities page */
+  .section-title::before {
+    display: none;
+  }
+
+}
